@@ -24,7 +24,7 @@ contrário disso:
 O primeiro dígito do CPF é 7
 """
 
-cpf = input("Digite um cpf (apenas números) para verificação: ")#74682489070
+cpf = input("Digite um cpf (apenas números) para verificação: ").replace('.', '')#74682489070
 if len(cpf) != 11 or not cpf.isdigit():
     print("CPF inválido, por gentileza digite um cpf com 11 dígitos numéricos")
 else:
