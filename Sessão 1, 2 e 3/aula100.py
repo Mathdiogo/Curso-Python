@@ -24,37 +24,59 @@ contrário disso:
 O primeiro dígito do CPF é 7
 """
 
-cpf = input("Digite um cpf (apenas números) para verificação: ")#929.934.680-14
+cpf = input("Digite um cpf (apenas números) para verificação: ")#74682489070
 if len(cpf) != 11 or not cpf.isdigit():
     print("CPF inválido, por gentileza digite um cpf com 11 dígitos numéricos")
 else:
     digitos = []
     for digito in cpf[:9]: #para cada digito do cpf pegando apenas os 9 primeiros digitos
         digitos.append(int(digito))# adicionar cada digito em uma lista
-       
-print('Digitos do cpf: ', digitos) #printando os digitos do cpf        
+             
 multi = 10
 while multi > 1:
     operacao = []
     for numero in digitos:
         operacao.append(numero*multi)
         multi -= 1
-        
-print('Resultado da operação: ', operacao)        
-resultado_digito_1 = 0
+             
+resultado = 0
 for numero in operacao:
-    resultado_digito_1 += numero
-    
-print('Resultado da soma: ', resultado_digito_1)
+    resultado += numero
 
-resultado_digito_1 *= 10 #Multiplicando resultado por 10
-resto = resultado_digito_1 % 11
-print('Resto: ', resto)
+resto = (resultado * 10) % 11
 
 if resto > 9:
-    resultado_digito_1 = 0
-    primeiro_digito = resultado_digito_1
-    print('Primeiro dígito: ', primeiro_digito)
+    resultado = 0
+    primeiro_digito = resultado
 else:
     primeiro_digito = resto
-    print('Primeiro dígito: ', primeiro_digito)
+    
+cpf_primeiro_digito_verficado = []
+for digito in cpf[:10]: #para cada digito do cpf pegando apenas os 10 primeiros digitos
+    cpf_primeiro_digito_verficado.append(int(digito))# adicionar cada digito em uma lista       
+
+multi = 11
+while multi > 1:
+    segunda_operacao = []
+    for numero in cpf_primeiro_digito_verficado:
+        segunda_operacao.append(numero*multi)
+        multi -= 1   
+        
+resultado2 = 0
+for numero in segunda_operacao:
+    resultado2 += numero
+    
+resto2 = (resultado2 * 10) % 11
+
+if resto2 > 9:
+    segundo_digito = 0
+else:
+    segundo_digito =  resto2
+
+decimo_digito = int(cpf[9])    
+decimo_primeiro_digito = int(cpf[10])
+
+if decimo_digito == primeiro_digito and decimo_primeiro_digito == segundo_digito:
+    print("CPF Válido! ")
+else:
+    print("CPF Inválido. ")
