@@ -1,1 +1,0 @@
-#Explicação do que vamos aprender na sessão 4

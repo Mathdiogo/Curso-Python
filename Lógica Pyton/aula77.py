@@ -1,3 +1,0 @@
-"""
-Aula de mentoria
-"""
