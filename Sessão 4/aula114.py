@@ -1,3 +1,4 @@
+
 """
 Higher Order Functions - Funções que podem receber e/ou retornar outras funções
 Funções de primeira classe - First-Class Functions - Funções que são tratadas 

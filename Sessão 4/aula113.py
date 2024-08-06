@@ -21,4 +21,3 @@ def par_impar(numero):
     if multiplo_de_dois:
         return f'{numero}par'
     
-    return f'{numero}ímpar'
