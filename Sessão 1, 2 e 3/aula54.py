@@ -18,7 +18,7 @@ entrada = input('Digite um número: ')
 #     print('Você não digitou um número inteiro')
 
 try:
-    entrada_int = float(entrada)
+    entrada_int = int(entrada)
     par_impar = entrada_int % 2 == 0
     par_impar_texto = 'ímpar'
 
