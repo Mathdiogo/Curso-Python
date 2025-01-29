@@ -1,14 +1,8 @@
-'''Explique o que faz a compreensão de listas no código abaixo:'''
+'''Explique o que é um parâmetro opcional em uma função.'''
 
-numeros = [x**2 for x in range(5)]
-print(numeros)
-'''Explicando com um for padrão'''
+
 '''
-Temos uma lista chamada numeros, para um tal valor x que pode ir de 0 a 5
-eleve x ao quadrado e o resultado adicione na lista numeros
+Um parâmetro opcional é um parâmetro de uma função que tem um valor padrão definido  (None por exemplo).
+Isso significa que, se o usuário não passar um valor para esse parâmetro ao chamar a função,
+o valor padrão será utilizado. Se o usuário fornecer um valor, ele substituirá o valor padrão.
 '''
-numeros = [ ]
-for x in range(5):
-    x = x**2
-    numeros.append(x)
-print(numeros)

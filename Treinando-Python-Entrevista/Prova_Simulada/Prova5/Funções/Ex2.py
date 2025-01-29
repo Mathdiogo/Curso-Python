@@ -1,8 +1,19 @@
-'''Escreva um código que verifica se a chave "nome" está presente no dicionário:'''
+'''Escreva uma função que retorne o maior valor entre dois números.'''
 
-dados = {"idade": 25, "cidade": "São Paulo"}
+def retorna_maior_valor(v1, v2):
+    try:
+        if float(v1) > float(v2):
+            return print(f"O maior valor é {v1}")
+        else:
+            return print(f"O maior valor é {v2}")
 
-try:
-   print(f"O nome é {dados['nome']} no dicionário dados")
-except:KeyError
-print("'nome' não esta incluso no dicionário")
+    except ValueError:
+        print("É necessário que o valor inserido seja um numero e não uma string")
+
+
+def main():
+    valor1 = input("Digite o primeiro valor: ")
+    valor2 = input("Digite o segundo valor: ")
+    retorna_maior_valor(valor1, valor2)
+
+main()

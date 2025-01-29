@@ -1,7 +1,7 @@
-'''Como você adiciona um elemento a um conjunto no Python?'''
+''' que acontece se você esquecer de usar return em uma função?'''
 
-meu_set = {1,2,3,4,5}
-
-meu_set.add(9)
-
-print(meu_set)
+'''
+Se você esquecer de usar return em uma função, ela será executada normalmente, 
+mas retornará None por padrão. Isso significa que, se outra parte do código esperar um valor de retorno dessa função, 
+poderá haver problemas ao tentar usar o resultado.
+'''
