@@ -1,16 +1,9 @@
-'''conjunto_a = {1, 2, 3}
-conjunto_b = {3, 4, 5}
-uniao = conjunto_a.union(conjunto_b)
-diferenca = conjunto_a.difference(conjunto_b)
-print(uniao.intersection(diferenca))  # Qual é o resultado?'''
+'''nome = "Maria"
+idade = 25
+print(f"Nome: {nome}, Idade: {idade} anos.")  # Formatação correta?'''
 
-conjunto_a = {1, 2, 3}
-conjunto_b = {3, 4, 5}
-uniao = conjunto_a.union(conjunto_b)
-diferenca = conjunto_a.difference(conjunto_b)
-print(uniao.intersection(diferenca))  # Qual é o resultado?
+nome = "Maria"
+idade = 25
+print(f"Nome: {nome}, Idade: {idade} anos.")  # Formatação correta?
 
-
-# unidao = {1,2,3,4,5}
-# diferenca = {1, 2}
-# saida final = uniao & diferença = {1,2}
+# No meu perceber está correto sim! Depende do que querai ser exibido
